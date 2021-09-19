@@ -1,0 +1,43 @@
+<h2>View All farmer details</h2>   
+
+ <div>
+    
+   <ul>
+         <!-- <ul *ngIf = "tempFarmerDetail && tempFarmerDetail.length">     -->
+    <li *ngFor="let x of tempFarmerDetail">
+            Name: {{x.farmerName}}<br>
+            Email: {{x.farmerEmail}}<br>
+            ContactNum: {{x.contactNum}}<br>
+            Password: {{x.password}}<br>
+            SoilPhCert: {{x.soilPhCert}}<br>
+            PanCard: {{x.pancardNumber}}<br>
+            AadharNumber: {{x.aadharNumber}}<br>
+            Account Id: {{x.bankDetail.accountId}}<br>
+            Address Id: {{x.addressDetail.addressId}}<br>
+
+
+    </li> 
+    
+    
+    <!-- <ul *ngIf = "farmObj && farmObj.length">   
+     <button (click)="viewFarmer()" >Click</button> 
+    <input size="100" type=text placeHolder="Search By Email.." name=c1 [(ngModel)]="farmerEmail" (ngModelChange)="viewFarmer()"> <br>
+    Showing Results For...{{farmerEmail}}
+    <li *ngFor="let x of farmObj">
+            Name: {{x.farmerName}}<br>
+            Email: {{x.farmerEmail}}<br>
+            ContactNum: {{x.contactNum}}<br>
+            Password: {{x.password}}<br>
+            SoilPhCert: {{x.soilPhCert}}<br>
+            PanCard: {{x.pancardNumber}}<br>
+            AadharNumber: {{x.aadharNumber}}<br>
+            Account Id: {{x.bankDetail.accountId}}<br>
+            Address Id: {{x.addressDetail.addressId}}<br>
+
+
+    </li> -->
+</ul>
+</div>
+
+
+

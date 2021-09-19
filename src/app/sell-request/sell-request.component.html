@@ -1,0 +1,50 @@
+<div style="text-align: center;">
+<form #sellRequestForm="ngForm" (ngSubmit)="onSubmit(sellRequestForm)" ngNativeValidate>
+	<!-- {{sellRequestForm.value |json}} -->
+	
+
+	<div ngModelGroup="cropDetail">
+		
+	
+	  
+		Crop Type &nbsp;&nbsp;&nbsp;
+		<select (change)="selectCropType($event.target.value)" name="cropType" ngModel>
+			<option *ngFor="let type of dCrop" value={{type.cropType}}  >{{type.cropType}}</option>
+		  </select><br><br>
+	<!-- <input type =text name="cropType" ngModel placeholder="Enter crop type" class="padding_textbox" required><br><br> -->
+	Crop Name &nbsp;&nbsp;&nbsp;
+	<select (change)="selectedCropName($event.target.value)" name="cropName" ngModel>
+		<option *ngFor="let type of cropNames" value={{type}} >{{type}}</option>
+	  </select><br><br>
+	<!-- <input type =text name="cropName" ngModel placeholder="Enter crop name" class="padding_textbox" required><br><br> -->
+	MSP(₹) &nbsp;&nbsp;&nbsp;
+	<input type =number name="msp" ngModel placeholder="Enter MSP" class="padding_textbox" required><br><br>
+	</div>	
+		
+
+	
+		Fertilizer Type &nbsp;&nbsp;&nbsp;
+		<input type=text name=fertilizer ngModel placeholder="Enter fertilizer" class="padding_textbox" required><br><br>
+	
+	
+		Base Price(₹) &nbsp;&nbsp;&nbsp;
+		<input type=number name=basePrice ngModel placeholder="Enter base Price" class="padding_textbox" required><br><br>
+	
+	
+		Quantity(in kg) &nbsp;&nbsp;&nbsp;
+		<input type=number name=quantityKg ngModel placeholder="Enter Quantity" class="padding_textbox" required><br><br>
+
+		Sell Request Date &nbsp;&nbsp;&nbsp;
+		<input type=date name=sellReqDate ngModel ><br><br>
+	
+	<div ngModelGroup="farmerDetail">
+	
+</div> 
+	
+	<button class="button">Place Request</button>
+	<a routerLink="/farmerDashboard" class="button">Back</a>
+	
+
+
+</form>
+</div>

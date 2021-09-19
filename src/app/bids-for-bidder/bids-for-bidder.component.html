@@ -1,0 +1,67 @@
+<div>
+
+<h2 style="text-align: center;">List of Bids</h2>
+<table *ngIf="tempLiveBidsForBidder">
+
+	<tr>
+		<th>Bid Id</th>
+		<th>Sell Id</th>
+		<th>Crop Name</th>
+		<th>Base Price(₹)</th>
+		<th>Current Bid(₹)</th>
+		
+		
+	</tr>
+	<tr *ngFor="let liveBids of tempLiveBidsForBidder">
+		<td>{{liveBids[0]}}</td>
+		<td>{{liveBids[1]}}</td>
+		<td>{{liveBids[2]}}</td>
+		<td>{{liveBids[3]}}</td>
+		<td>{{liveBids[4]}}</td>
+		
+		
+	</tr>
+</table>
+<app-place-bid></app-place-bid>
+</div>
+
+<!-- <div>
+    <form #PlaceBidForm="ngForm" (ngSubmit)="onSubmit(PlaceBidForm)" ngNativeValidate>
+        {{PlaceBidForm.value|json}}
+        <br>
+        Bid Amount: &nbsp;&nbsp;&nbsp;
+        <input type="text" name="bidderAmt" ngModel placeholder="Enter bid Amount" class="padding_textbox" required><br> <br>
+
+        <button type="button" class="bidButton">Confirm</button>
+    </form>
+
+</div> -->
+
+<!-- <div>
+	<h2 style="text-align: center;">List of Bids</h2>
+	<table *ngIf="tempLiveBidsForBidder">
+	
+		<tr>
+			<th>Sell Id</th>
+			<th>Crop Name</th>
+			<th>Base Price</th>
+			<th>Current Bid</th>
+			<th>Your Bid</th>
+			<th>Action</th>
+			
+		</tr>
+		<tr *ngFor="let liveBids of tempLiveBidsForBidder">
+			<td>{{liveBids[0]}}</td>
+			<td>{{liveBids[1]}}</td>
+			<td>{{liveBids[2]}}</td>
+			<td>{{liveBids[3]}}	</td>
+			<td><input 	</td>
+
+			<td>
+				<button type="button" class="btn btn-block" style="background-color: #ff9f00" (click)="placeBid()">Place Bid</button>
+				
+			</td>
+			
+		</tr>
+	</table>
+	</div> -->

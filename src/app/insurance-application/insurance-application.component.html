@@ -1,0 +1,50 @@
+
+<div class="container"> 
+    <form #insuranceForm = "ngForm" (ngSubmit) = "onSubmit(insuranceForm)" ngNativeValidate>
+       <!-- {{insuranceForm.value | json}}  -->
+    <br>
+    <span style="color:darkblue;">Welcome to the Insurance Application Page
+    <br>-------------------------------------------------------<br>
+    
+    </span>
+    <span style="color:darkblue;">
+    <p>
+      <b>Please note, the details must be same as they are mentioned on your Insurance Policy</b> 
+        <br>-----------------------
+    </p>
+    </span>
+    Insurance Company &nbsp;&nbsp;&nbsp;
+    <input type="text" name = "insuranceComp" ngModel placeholder="Enter Company Name..." class="padding_textbox" required><br><br>
+    Insuree Name &nbsp;
+    <input type="text" name = "insureeName" ngModel placeholder="Enter name..." class="padding_textbox" required><br><br>
+    Insurance Date &nbsp;
+    <input type="date" name = "insuranceDate" ngModel placeholder="Enter start date..." class="padding_textbox" required><br><br>
+    End Date &nbsp;
+    <input type="date" name = "endDate" ngModel placeholder="Enter end date..." class="padding_textbox" required><br><br>
+    Share Premium(₹) &nbsp;
+    <input type="number" name = "sharePremium" ngModel placeholder="Enter share premium..." class="padding_textbox" required><br><br>
+    Premium Amount(₹) &nbsp;
+    <input type="number" name = "premiumAmt" ngModel placeholder="Enter premium amount..." class="padding_textbox" required><br><br>
+    Total Sum Insured(₹) &nbsp;
+    <input type="number" name = "totSumInsured" ngModel placeholder="Enter total sum..." class="padding_textbox" required><br><br>
+    
+     <div ngModelGroup="farmerDetail">
+      E-mail Id &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="email" name = "farmerEmail" ngModel placeholder="Enter your e-mail.." class="padding_textbox" required><br>
+    
+  </div>
+    <span style="color:darkblue;">
+    <p>
+    </p>
+    </span>
+    <div ngModelGroup="cropDetail">
+      Crop Name. &nbsp;
+      <input type="text" name="cropName" ngModel placeholder="Enter crop name..." class="padding_textbox" required><br><br>
+    </div>
+   
+    <button type=submit class="loginbutton">Register</button>&nbsp;&nbsp;
+    <!-- <button type=button class="loginbutton" >Reset</button>&nbsp;&nbsp; -->
+    <a href="/insuranceDashboard"> <button type=button class="loginbutton">Go Back</button></a>
+    <br> 
+  </form>
+  </div>

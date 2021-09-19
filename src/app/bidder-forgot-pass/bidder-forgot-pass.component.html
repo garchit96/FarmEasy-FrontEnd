@@ -1,0 +1,25 @@
+<form #newPassBidderForm="ngForm" (ngSubmit)="onSubmit(newPassBidderForm)" ngNativeValidate>
+    <div class="main">
+    <!-- {{newPassBidderForm.value|json}} -->
+    <br>
+    <span style="color:darkblue;">
+        
+    
+    </span>
+    <div class="content">
+    Registered Email &nbsp;&nbsp;&nbsp;
+    <input type="text" name="bidderEmail" ngModel placeHolder="Enter your Email..." class="textbox" [(ngModel)] = "bidderEmail" required><br><br>
+
+    New Password &nbsp;&nbsp;&nbsp;
+    <input type="text" name="password" ngModel placeHolder="Enter your new password" class="textbox" [(ngModel)] = "password" required><br>
+    <br><br><br>
+    <button   class="loginbutton">Reset Password</button>&nbsp;&nbsp;&nbsp;
+    <!-- <button routerLink='/Home' class="loginbutton">Home</button>&nbsp;&nbsp;&nbsp; -->
+    <button routerLink='/bidderLogin' class="loginbutton">Go Back To Login Page</button>&nbsp;&nbsp;&nbsp;
+
+
+
+    </div>
+
+   </div>
+</form>

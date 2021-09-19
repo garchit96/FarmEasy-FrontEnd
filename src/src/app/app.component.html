@@ -1,0 +1,10 @@
+<h1 class="heading">Phone Book App</h1>
+<ul *ngFor="let htmlData of thisPageGlobalData">
+<li>FirstName: {{htmlData.firstName}}
+LastName: {{htmlData.lastName}}
+Number: {{htmlData.number}}
+</li>
+</ul>
+<app-add-contact></app-add-contact>
+
+<router-outlet></router-outlet>  

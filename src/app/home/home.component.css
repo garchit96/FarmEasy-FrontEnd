@@ -1,0 +1,118 @@
+.content
+{
+  display: flex;
+  flex-direction: column;
+  margin: 3% 18% 8%;
+  align-self: center;
+  padding: 3% 3%;
+  background:rgb(61, 194, 70);
+  text-align: center;
+  border-radius: 20px;
+  height: 60%;
+
+}
+.title
+{
+  font-family: Baskerville;
+  color: white;
+  font-size: 45px;
+  margin: 5px 0;
+}
+
+.subtitle
+{
+  margin: 0 0 15px;
+  font-family: Baskerville;
+  color: white;
+  font-size: 30px
+}
+
+.learnmore
+{
+  color: white;
+  font-family: "Noto Sans Glagolitic";
+  border-radius: 20px;
+  background-color: darkred;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 13px;
+  font-size: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.about-card
+{
+  margin: 1.5em 0px;
+  background: rgb(255,255,255);
+  width: 33.3%;
+  float: left;
+  padding: 1.5em 0 1.7em;
+  text-align: center;
+  height: 15.5rem;
+  overflow: auto;
+}
+
+.about-content
+{
+  margin: 0 3em;
+  font-size: 1.1em;
+  color: dimgrey;
+  font-family: "Noto Sans Glagolitic";
+
+}
+
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 40px 10px; /* Add some padding */
+  text-decoration: none; 
+  width: 18.5%; 
+                 /* Remove underline */
+   
+} 
+
+.navbar img{
+	float:left;
+	padding: 28.5px 10px;
+	height:50px;
+}
+.nav {
+  overflow: hidden;
+  background-color:forestgreen;
+  font-size: large;
+  
+  
+  
+}
+
+
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+
+.nav .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.myDropdown a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+

@@ -1,0 +1,24 @@
+<div style="text-align: center;">
+    <form #BidForm = "ngForm" (ngSubmit) = "onSubmit(BidForm)" ngNativeValidate>
+       <!-- {{BidForm.value | json}}  -->
+    <br>
+    <span style="color:darkblue; font-size: larger;">Place Your Bid
+    <br>-------------------------------------------------------<br>
+    <br><br>
+    </span>
+    <span style="color:darkblue;">
+    
+    </span>
+    Bid Id &nbsp;&nbsp;&nbsp;
+    <input type="text" name = "bidId" ngModel placeholder="Enter Bid id" class="padding_textbox" required><br><br>
+    Your Bid Amount &nbsp;
+    <input type="tel" name = "bidderAmt" ngModel placeholder="Enter you bid" class="padding_textbox"  required><br><br>
+    
+  	
+     
+    <button type=submit class="button" >Submit Bid</button>&nbsp;&nbsp;
+    
+    
+    <br>
+</form>
+</div>

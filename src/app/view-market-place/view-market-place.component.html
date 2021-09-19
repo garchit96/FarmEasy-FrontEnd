@@ -1,0 +1,116 @@
+
+
+
+    <div class="container">
+        <p style="color: rgb(15, 10, 10) ;font-size:20px">Sell Request Details</p>
+    </div>
+
+    <div class="container">
+        <table class="table-bordered" border=1>
+            <thead>
+                <tr>
+                    <th>Sell Id</th>
+                    <th>Crop Name</th>
+                    
+                    <th>Base Price</th>
+   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let sr of tempsellReq">
+                    <!-- <td><a routerLink = "/book/{{ book.bookId }}"><img src = "{{ book.imageUrl }}" style="width: 70px; height: 90px"/></a></td> -->
+                    <td>{{ sr.sellId }}</td>
+                    <td>{{ sr.cropDetail.cropName}}</td>
+                    <td>{{ sr.basePrice }}</td>
+                    
+                    <!-- <td>{{ book.price | currency: "INR"}}</td> -->
+                    <!-- <td>
+                        <star-rating [rating] = "book.rating"></star-rating>
+                    </td> -->
+                    <!-- <td>
+                        <button type="button" class="btn btn-block" style="background-color: #ff9f00" (click)="addToCart(book)">Add To Cart</button>
+                        <button type="buton" class="btn btn-block" style="background-color: #fb641b">Buy Now</button>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="container">
+        <p style=" color: rgb(15, 10, 10); font-size:20px">Current Bid</p>
+    </div>
+
+    <div class="container">
+        <table class="table-bordered" border=1>
+            <thead>
+                <tr>
+                    <th>Sell Id</th>
+                    <th>Current Bid Price</th>
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let max of tempMaxObj">
+                    <!-- <td><a routerLink = "/book/{{ book.bookId }}"><img src = "{{ book.imageUrl }}" style="width: 70px; height: 90px"/></a></td> -->
+                    <td>{{max.sellRequest.sellId}}</td>
+                    <td>{{ max.bidderAmt }}</td>
+
+                    <!-- <td>{{ b.bidReqDate }}</td>
+                    <td>{{ b.bidderAmt }}</td>
+                    <td>{{ b.bidderDetail.bidderEmail }}</td>
+                    <td>{{ b.sellRequest.sellId }}</td> -->
+                    <!-- <td>{{ book.price | currency: "INR"}}</td> -->
+                    <!-- <td>
+                        <star-rating [rating] = "book.rating"></star-rating>
+                    </td> -->
+                    <!-- <td>
+                        <button type="button" class="btn btn-block" style="background-color: #ff9f00" (click)="addToCart(book)">Add To Cart</button>
+                        <button type="buton" class="btn btn-block" style="background-color: #fb641b">Buy Now</button>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <p style=" color: rgb(15, 10, 10); font-size: 20px">Previous Bids</p>
+    </div>
+
+    <div class="container">
+        <table class="table-bordered" *ngIf = "tempBidObj && tempBidObj.length" border=1>
+            <thead>
+                <tr>
+                    <th>Bid Id</th>
+                    <th>Bid Request Date</th>
+                    
+                    <th>Bidder Amount</th>
+                    
+                    <th>Bidder Email</th>
+                    <th>Sell Id</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let b of tempBidObj">
+                    <!-- <td><a routerLink = "/book/{{ book.bookId }}"><img src = "{{ book.imageUrl }}" style="width: 70px; height: 90px"/></a></td> -->
+                    <td>{{ b.bidId }}</td>
+                    <td>{{ b.bidReqDate }}</td>
+                    <td>{{ b.bidderAmt }}</td>
+                    <td>{{ b.bidderDetail.bidderEmail }}</td>
+                    <td>{{ b.sellRequest.sellId }}</td>
+                    <!-- <td>{{ book.price | currency: "INR"}}</td> -->
+                    <!-- <td>
+                        <star-rating [rating] = "book.rating"></star-rating>
+                    </td> -->
+                    <!-- <td>
+                        <button type="button" class="btn btn-block" style="background-color: #ff9f00" (click)="addToCart(book)">Add To Cart</button>
+                        <button type="buton" class="btn btn-block" style="background-color: #fb641b">Buy Now</button>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a routerLink="/farmerDashboard" style="font-size: large;" class="button">Back</a>

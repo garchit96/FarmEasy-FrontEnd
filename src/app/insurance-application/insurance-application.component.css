@@ -1,0 +1,39 @@
+input[type=text], input[type=password] ,input[type="number"]  ,input[ type="tel"]  ,input[ type="email"], input[ type="date"]{
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    align-items: center;
+  }
+
+  .container{
+    background-color: rgb(205, 217, 218);
+    box-sizing: border-box;
+    border-style: inset;
+    padding: 16px;
+    width:800px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: x-large;
+}
+
+.loginbutton{
+    padding: 0.7%;
+    font-family: "Times New Roman", Times, serif; 
+    font-size:larger;
+    background-color:   #386674; 
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    }
+
+
+    .loginbutton:hover {
+        background-color: #30504d; /* Green */
+        color: white;
+      }

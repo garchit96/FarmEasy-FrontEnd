@@ -1,0 +1,83 @@
+<div class="container">
+    <form #bidderForm = "ngForm" (ngSubmit) = "onSubmit(bidderForm)" ngNativeValidate>
+       <!-- {{bidderForm.value | json}}  -->
+    <br>
+    <span style="color:darkblue;">Welcome to the Bidder Registration Page.
+    <br>-------------------------------------------------------<br>
+    Please register with us to proceed.<br><br>
+    </span>
+    <span style="color:darkblue;">
+    <p>
+       Personal Details
+        <br>-----------------------
+    </p>
+    </span>
+    Full Name &nbsp;&nbsp;&nbsp;
+    <input type="text" name = "bidderName" ngModel placeholder="Enter your name" class="padding_textbox" required><br><br>
+    Contact No. &nbsp;
+    <input type="tel" name = "contactNum" ngModel placeholder="Enter Phone number" class="padding_textbox" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required><br><br>
+    E-mail Id &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="email" name = "bidderEmail" ngModel placeholder="Enter your e-mail" class="padding_textbox" [(ngModel)] = "bidderEmail" required><br>
+    <span style="color:darkblue;">
+    <p >
+        Address Details
+        <br>--------------------
+    </p>
+    </span>
+  	
+     <div ngModelGroup="addressDetail">
+     
+    <input type="text" name = "addressLine" size="50" ngModel placeholder="Line 1" class="padding_textbox"><br><br>
+    City &nbsp;&nbsp;
+    <input type="text" name="city" ngModel placeholder="City" class="padding_textbox" required><br><br>
+    State &nbsp;
+    <input type="text" name="state" ngModel placeholder="State" class="padding_textbox" required><br><br>
+    Pincode &nbsp;
+    <input type="number" name="pincode" ngModel placeholder="Pincode" class="padding_textbox" maxlength="6" required><br>
+</div>
+   
+    
+<span style="color:darkblue;">
+    <p>
+        Bank Details
+        <br>-----------------
+    </p>
+</span>
+   
+    <div ngModelGroup="bankDetail">
+    Account No. &nbsp;
+    <input type="number" name="accountNum" ngModel placeholder="Acc No" class="padding_textbox" required><br><br>
+    IFSC Code &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="ifscCode" ngModel placeholder="IFSC" class="padding_textbox"required>&nbsp;<br>
+</div>
+    <span style="color:darkblue;">
+    <p>
+        Document Upload
+        <br>------------------------
+    </p>
+    </span>
+    Aadhar  &nbsp;
+    <input type="text" name="aadharNumber" ngModel placeholder="Aadhar" class="padding_textbox" required><br><br>
+    PAN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="pancardNumber" ngModel placeholder="PAN" class="padding_textbox" required >&nbsp; <br><br>
+    TraderLicense  &nbsp;
+    <input type="text" name="traderLicense" ngModel placeholder="TraderLicense"class="padding_textbox" required><br>
+    <br>
+    <span style="color:darkblue;">
+    <p>
+        Set Password
+        <br>-----------------
+    </p>
+    </span>
+    Password  &nbsp;
+    <input type=password name="password" ngModel placeholder="Password" class="padding_textbox" [(ngModel)] = "pass" minlength="8" required><br><br>
+    <!-- Confirm Password &nbsp; -->
+    <!-- <input type=password name="password" placeholder="Re-e    nter Password" class="padding_textbox" [(ngModel)] = "password" minlength="8" required>&nbsp; <br> -->
+    <br><br>
+    <button type=submit class="loginbutton">Register</button>&nbsp;&nbsp;
+    <!-- <button type=button class="loginbutton" routerLink='/bidderRegister'>Reset</button>&nbsp;&nbsp; -->
+    <button type=button routerLink='/home' class="loginbutton">Home</button>&nbsp;&nbsp;
+    
+    <br>
+</form>
+</div>

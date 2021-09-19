@@ -1,0 +1,19 @@
+<p>add-contact works!</p>
+you are adding {{con.firstname}} {{con.lastname}} {{con.phone}}
+<br>
+
+
+
+<form (ngSubmit)="addContact()">
+  
+    Enter First Name <input type="text" name="t1" [(ngModel)]=con.firstname /> <br />
+      
+    Enter Last Name <input type="text" name="t2" [(ngModel)]=con.lastname /> <br />
+      
+    Enter Contact Number <input type="number" name="t3" [(ngModel)]=con.phone /> <br />
+      
+    
+        <button type="submit">Add</button>
+      
+     
+    </form>
